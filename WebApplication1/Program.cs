@@ -6,11 +6,14 @@ using Microsoft.AspNetCore.Authorization;
 using PresentationLayer.Authentication;
 using PresentationLayer.Authorization;
 using Microsoft.EntityFrameworkCore;
+using PresentationLayer.Integration;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Adding jwtsettings.json to Builder (for JWT)
-builder.Configuration.AddJsonFile("jwtsettings.json", optional: false, reloadOnChange: true);
+builder.Configuration
+    .AddJsonFile("jwtsettings.json", optional: false, reloadOnChange: true)
+    .AddJsonFile("corssettings.json", optional: false, reloadOnChange: true);
 
 builder.Services.AddControllers();
 
@@ -57,6 +60,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors(Cors.ReactAppPolicy);
 
 app.UseAuthentication();
 app.UseAuthorization();
