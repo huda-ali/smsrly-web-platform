@@ -53,4 +53,22 @@ namespace BusinessLogicLayer.ML
         [JsonPropertyName("properties_saved")]
         public int PropertiesSaved { get; set; }
     }
+    public class MlSimilarPropertyItem
+    {
+        public MlProperty Property { get; set; } = null!;
+        public double Score { get; set; }
+        public string Reason { get; set; } = string.Empty;
+    }
+
+    public class MlSimilarPropertiesResponse
+    {
+        [JsonPropertyName("property_id")]
+        public Guid PropertyId { get; set; }
+
+        [JsonPropertyName("similar_properties")]
+        public List<MlSimilarPropertyItem> SimilarProperties { get; set; } = new();
+
+        [JsonPropertyName("generated_at")]
+        public DateTime GeneratedAt { get; set; }
+    }
 }
