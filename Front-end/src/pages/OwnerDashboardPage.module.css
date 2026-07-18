@@ -1,0 +1,52 @@
+/* ── Topbar ── */
+.topbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 28px; background: #fff; border-bottom: 1px solid #e2e8f0; flex-wrap: wrap; gap: 12px; }
+.pageTitle { font-size: 22px; font-weight: 800; color: #1e293b; margin: 0 0 2px; }
+.mainBody { padding: 24px 28px; }
+.userAva { color: #94a3b8; font-size: 20px; }
+
+/* ── Table card ── */
+.contentCard { background: #fff; border: 1px solid #e2e8f0; border-radius: 14px; overflow: hidden; }
+.contentTitle { font-size: 17px; font-weight: 700; color: #1e293b; margin: 0; display: flex; align-items: center; }
+.tableHeader { display: flex; justify-content: space-between; align-items: center; padding: 18px 20px; border-bottom: 1px solid #f1f5f9; gap: 12px; flex-wrap: wrap; }
+.searchBox { display: flex; align-items: center; gap: 8px; border: 1.5px solid #e2e8f0; border-radius: 8px; padding: 7px 12px; background: #f8fafc; min-width: 160px; flex: 1; max-width: 240px; }
+.searchInput { border: none; outline: none; background: transparent; font-size: 13px; color: #334155; flex: 1; min-width: 0; }
+.clearSearch { background: none; border: none; color: #94a3b8; cursor: pointer; font-size: 11px; padding: 0; flex-shrink: 0; }
+.thead th { padding: 10px 14px !important; font-size: 11px !important; font-weight: 700 !important; color: #94a3b8 !important; letter-spacing: 0.5px !important; background: #f8fafc !important; border-bottom: 1px solid #e2e8f0 !important; white-space: nowrap; }
+.trow td { padding: 12px 14px !important; vertical-align: middle !important; border-bottom: 1px solid #f8fafc !important; font-size: 14px; }
+.trow:hover td { background: #fafbfc !important; }
+.propThumb { width: 42px; height: 42px; border-radius: 8px; background: #f1f5f9; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: center; overflow: hidden; flex-shrink: 0; cursor: pointer; }
+.propName { font-size: 14px; font-weight: 600; color: #1e293b; cursor: pointer; }
+.propName:hover { color: #2563eb; text-decoration: underline; }
+.badgeActive { background: #f0fdf4 !important; color: #16a34a !important; font-size: 12px !important; padding: 4px 10px !important; font-weight: 600 !important; border-radius: 20px !important; }
+.badgeRented { background: #eff6ff !important; color: #2563eb !important; font-size: 12px !important; padding: 4px 10px !important; font-weight: 600 !important; border-radius: 20px !important; }
+.pagination { display: flex; justify-content: space-between; align-items: center; padding: 14px 20px; border-top: 1px solid #f1f5f9; flex-wrap: wrap; gap: 8px; }
+
+/* ── Delete modal ── */
+.modalOverlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 1000; display: flex; align-items: center; justify-content: center; padding: 16px; }
+.modal { background: #fff; border-radius: 16px; padding: 28px 24px; width: 100%; max-width: 420px; box-shadow: 0 20px 60px rgba(0,0,0,0.2); }
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  /* Move sidebar off-canvas — use Bootstrap's d-none d-md-flex */
+  .sidebar-panel { display: none !important; }
+  .sidebar-content { margin-left: 0 !important; }
+
+  .topbar { padding: 14px 16px; }
+  .pageTitle { font-size: 18px; }
+  .mainBody { padding: 14px 16px; }
+  .tableHeader { padding: 14px 16px; }
+
+  /* Hide non-essential table columns */
+  .thead th:nth-child(4),
+  .thead th:nth-child(5),
+  .trow td:nth-child(4),
+  .trow td:nth-child(5) { display: none; }
+}
+
+@media (max-width: 480px) {
+  .mainBody { padding: 12px; }
+  .topbar { padding: 12px; }
+  .thead th:nth-child(3),
+  .trow td:nth-child(3) { display: none; }
+  .modal { padding: 20px 16px; }
+}

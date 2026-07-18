@@ -1,0 +1,49 @@
+.page { min-height: 100vh; background: #f8fafc; display: flex; align-items: center; justify-content: center; padding: 24px 16px; }
+.center { width: 100%; max-width: 480px; display: flex; flex-direction: column; align-items: center; }
+.logoWrap { display: flex; align-items: center; gap: 10px; margin-bottom: 4px; text-decoration: none !important; }
+.logoBox { width: 52px; height: 52px; background: #1d3a6b; border-radius: 14px; display: flex; align-items: center; justify-content: center; color: #fff; flex-shrink: 0; }
+.brandTitle { font-size: 26px; font-weight: 900; color: #1d3a6b; margin: 0; letter-spacing: -0.5px; }
+.brandSub { font-size: 14px; color: #64748b; margin: 0 0 20px; text-align: center; }
+.card { width: 100%; background: #fff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 32px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+.cardTitle { font-size: 20px; font-weight: 700; color: #1e293b; margin: 0 0 4px; }
+.cardSub { font-size: 13px; color: #64748b; margin: 0 0 20px; line-height: 1.5; }
+.demoBox { background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 10px; padding: 12px 14px; margin-bottom: 20px; }
+.demoTitle { font-size: 12px; font-weight: 700; color: #0369a1; display: flex; align-items: center; }
+.demoBtn { width: 100%; padding: 6px 4px; border: 1px solid #bae6fd; border-radius: 6px; background: #e0f2fe; font-size: 12px; font-weight: 600; color: #0369a1; cursor: pointer; transition: all 0.15s; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.demoBtn:hover { background: #0369a1; color: #fff; }
+.roleGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 6px; }
+.roleBtn { display: flex; align-items: center; justify-content: center; padding: 12px 8px; border: 1.5px solid #cbd5e1; border-radius: 8px; background: #fff; font-size: 14px; font-weight: 600; color: #334155; cursor: pointer; transition: all 0.15s; }
+.roleBtn:hover { border-color: #2563eb; color: #2563eb; }
+.roleActive { border-color: #2563eb !important; background: #eff6ff !important; color: #2563eb !important; }
+.field { }
+.fieldLabel { display: block; font-size: 13px; font-weight: 600; color: #1e293b; margin-bottom: 6px; }
+.inputWrap { position: relative; display: flex; align-items: center; }
+.inputIcon { position: absolute; left: 14px; color: #94a3b8; font-size: 14px; pointer-events: none; z-index: 1; }
+.input { width: 100%; padding: 11px 14px 11px 40px; border: 1.5px solid #cbd5e1; border-radius: 8px; font-size: 14px; color: #334155; outline: none; transition: border-color 0.15s; background: #fff; box-sizing: border-box; }
+.input:focus { border-color: #2563eb; box-shadow: 0 0 0 3px rgba(37,99,235,0.08); }
+.input::placeholder { color: #94a3b8; }
+.eyeBtn { position: absolute; right: 14px; background: none; border: none; color: #94a3b8; cursor: pointer; padding: 0; display: flex; align-items: center; font-size: 14px; }
+.checkLabel { display: flex; align-items: center; gap: 8px; font-size: 13px; color: #64748b; cursor: pointer; }
+.checkbox { accent-color: #2563eb; width: 15px; height: 15px; }
+.forgotLink { font-size: 13px; font-weight: 600; color: #2563eb; text-decoration: none; }
+.forgotLink:hover { text-decoration: underline; }
+.submitBtn { width: 100%; padding: 13px; background: #1d3a6b; color: #fff; border: none; border-radius: 8px; font-size: 15px; font-weight: 700; cursor: pointer; transition: background 0.15s; display: flex; align-items: center; justify-content: center; }
+.submitBtn:hover:not(:disabled) { background: #152c54; }
+.submitBtn:disabled { opacity: 0.7; cursor: not-allowed; }
+.divider { display: flex; align-items: center; gap: 12px; margin: 20px 0; color: #94a3b8; font-size: 11px; font-weight: 600; letter-spacing: 0.5px; }
+.divider::before, .divider::after { content: ''; flex: 1; height: 1px; background: #e2e8f0; }
+.socialBtn { width: 100%; display: flex; align-items: center; justify-content: center; padding: 11px; border: 1.5px solid #cbd5e1; border-radius: 8px; background: #fff; font-size: 14px; font-weight: 600; color: #334155; cursor: pointer; transition: all 0.15s; }
+.socialBtn:hover { border-color: #94a3b8; background: #f8fafc; }
+.footerText { margin-top: 20px; font-size: 14px; color: #64748b; text-align: center; }
+.footerLink { color: #2563eb; font-weight: 700; text-decoration: none; }
+.footerLink:hover { text-decoration: underline; }
+
+@media (max-width: 480px) {
+  .page { padding: 16px 12px; align-items: flex-start; }
+  .card { padding: 20px 16px; border-radius: 12px; }
+  .cardTitle { font-size: 18px; }
+  .logoBox { width: 44px; height: 44px; }
+  .brandTitle { font-size: 22px; }
+  .demoBtn { font-size: 11px; padding: 5px 4px; }
+  .roleBtn { padding: 10px 6px; font-size: 13px; }
+}
