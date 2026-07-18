@@ -8,13 +8,14 @@ namespace PresentationLayer.Integration
             this IServiceCollection services,
             IConfiguration configuration)
         {
-            var allowedOrigins = configuration.GetSection("Cors:AllowedOrigins").Get<string[]>() ?? new[] { "http://localhost:5173" };
-            
+            var allowedOrigin = configuration["Cors:ReactAppOrigin"]
+                                ?? throw new InvalidOperationException("Cors:ReactAppOrigin is not set");
+
             services.AddCors(options =>
             {
                 options.AddPolicy(ReactAppPolicy, policy =>
                 {
-                    policy.WithOrigins(allowedOrigins)
+                    policy.WithOrigins(allowedOrigin)
                         .AllowAnyHeader()
                         .AllowAnyMethod()
                         .AllowCredentials();
