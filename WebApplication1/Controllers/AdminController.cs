@@ -35,7 +35,7 @@ namespace PresentationLayer.Controllers
             var admins = _adminRepository.GetAll().Where(u => !u.IsDeleted)
                 .Select(a => new AdminDTO
                 {
-                    AdminId=a.UsserId,
+                    UsserId = a.UsserId,
                     FirstName = a.FirstName,
                     LastName = a.LastName,
                     NationalID = a.NationalID,
@@ -58,7 +58,7 @@ namespace PresentationLayer.Controllers
 
             var dto = new AdminDTO
             {
-                AdminId = admin.UsserId,
+                UsserId = admin.UsserId,
                 FirstName = admin.FirstName,
                 LastName = admin.LastName,
                 NationalID = admin.NationalID,
@@ -87,7 +87,7 @@ namespace PresentationLayer.Controllers
 
             AdminDTO response = new AdminDTO
             {
-                AdminId = admin.UsserId,
+                UsserId = admin.UsserId,
                 FirstName = admin.FirstName,
                 LastName = admin.LastName,
                 NationalID = admin.NationalID,

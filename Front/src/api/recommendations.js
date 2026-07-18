@@ -2,7 +2,7 @@ import { apiClient } from "./client";
 
 export const fetchRecommendations = (topN = 10) =>
   apiClient
-    .get(`/recommendation?topN=${topN}`)
+    .get(`/Recommendation?topN=${topN}`)
     .then((res) => res.data);
 
 export const recordInteraction = (
@@ -10,7 +10,7 @@ export const recordInteraction = (
   interactionType,
   rating
 ) =>
-  apiClient.post("/recommendation/interact", {
+  apiClient.post("/Recommendation/interact", {
     propertyId,
     interactionType,
     rating,

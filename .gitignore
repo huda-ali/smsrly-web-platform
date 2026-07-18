@@ -26,4 +26,5 @@ Front/*.sw?
 **/obj/
 **/node_modules/
 Front/.env
-.vs/
+.vs
+/WebApplication1/appsettings.Development.json

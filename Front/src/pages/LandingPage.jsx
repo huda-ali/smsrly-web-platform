@@ -90,14 +90,14 @@ export default function LandingPage() {
                     {user.avatar ? (
                       <img
                         src={user.avatar}
-                        alt={user.name}
+                        alt={`${user.firstName} ${user.lastName}`.trim()}
                         className={styles.navAvatarImg}
                         onError={handleImgError}
                       />
                     ) : (
                       <i className="fas fa-user-circle fa-lg"></i>
                     )}
-                    <span>{user.name.split(" ")[0]}</span>
+                    <span>{`${user.firstName} ${user.lastName}`.trim()}</span>
                   </Link>
                   {user.role === "owner" && (
                     <Link

@@ -50,6 +50,9 @@ builder.Services.AddAuthorization(options =>
 builder.Services.AddJwtAuth(builder.Configuration);
 builder.Services.AddSwaggerJwt();
 
+// Add CORS
+builder.Services.AddReactCors(builder.Configuration);
+
 // Register ML
 var mlApiBaseUrl = builder.Configuration["MlApi:BaseUrl"]
                    ?? throw new InvalidOperationException("MlApi:BaseUrl is not set");

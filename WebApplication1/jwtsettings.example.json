@@ -1,0 +1,10 @@
+{
+  "Jwt": {
+    "AccessSecret": "",
+    "RefreshSecret": "",
+    "Issuer": "",
+    "Audience": "",
+    "AccessTokenMinutes": 30,
+    "RefreshTokenDays": 7
+  }
+}

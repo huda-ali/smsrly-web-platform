@@ -28,6 +28,7 @@ namespace PresentationLayer.Controllers
                     FirstName = dto.FirstName,
                     LastName = dto.LastName,
                     NationalID = dto.NationalID,
+                    PhoneNumber = dto.PhoneNumber,
                     Email = dto.Email
                 };
 
@@ -90,6 +91,7 @@ namespace PresentationLayer.Controllers
                     FirstName = dto.FirstName,
                     LastName = dto.LastName,
                     NationalID = dto.NationalID,
+                    PhoneNumber = dto.PhoneNumber,
                     Email = dto.Email
                 };
 
