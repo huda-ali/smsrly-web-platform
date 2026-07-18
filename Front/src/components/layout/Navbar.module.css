@@ -1,0 +1,218 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  height: 64px;
+  background: #fff;
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.logoBox {
+  width: 34px;
+  height: 34px;
+  background: #1d3a6b;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.brandName {
+  font-size: 17px;
+  font-weight: 900;
+  color: #1d3a6b;
+  letter-spacing: -0.5px;
+}
+
+.links {
+  display: flex;
+  gap: 8px;
+}
+
+.link {
+  background: none;
+  border: none;
+  font-size: 14px;
+  color: #475569;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.link:hover {
+  color: #2563eb;
+  background: #f0f4ff;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.signInBtn {
+  background: none;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: #334155;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.signInBtn:hover {
+  background: #f1f5f9;
+}
+
+.getStartedBtn {
+  background: #1d3a6b;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 9px 18px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.getStartedBtn:hover {
+  background: #152c54;
+}
+
+.avatarBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 5px 12px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.avatarBtn:hover {
+  border-color: #2563eb;
+  color: #2563eb;
+}
+
+.avatarCircle {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+
+.avatarImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.avatarName {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.guestBadge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 5px 12px;
+  cursor: pointer;
+}
+
+.guestCircle {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #94a3b8;
+}
+
+.guestLabel {
+  font-size: 13px;
+  font-weight: 600;
+  color: #94a3b8;
+}
+
+.transparent {
+  background: transparent !important;
+  border-bottom-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.transparent .link,
+.transparent .brandName,
+.transparent .signInBtn {
+  color: #fff !important;
+}
+
+/* ── Dark mode ── */
+:global([data-theme='dark']) .navbar {
+  background: #0b1220;
+  border-bottom-color: #141d2e;
+}
+
+:global([data-theme='dark']) .link {
+  color: #c2cee4;
+}
+
+:global([data-theme='dark']) .link:hover {
+  color: #5b9dff;
+}
+
+:global([data-theme='dark']) .signInBtn {
+  color: #dbe3f5;
+}
+
+:global([data-theme='dark']) .signInBtn:hover {
+  background: #141d2e;
+}
+
+:global([data-theme='dark']) .avatarBtn {
+  border-color: #253148;
+  color: #dbe3f5;
+}
+
+:global([data-theme='dark']) .avatarCircle {
+  background: #141d2e;
+}
+
+:global([data-theme='dark']) .guestBadge {
+  background: #141d2e;
+  border-color: #253148;
+}
+
+:global([data-theme='dark']) .guestCircle {
+  background: #253148;
+  color: #9aa8c4;
+}
