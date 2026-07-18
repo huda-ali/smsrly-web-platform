@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Bll",
+    "\\Bll\\Interfaces",
+    "\\Bussines logic layer",
+    "\\DataAccessLayer",
+    "\\DataAccessLayer\\ModelContetxt",
+    "\\DepiDataBase"
+  ],
+  "SelectedNode": "\\Bll\\Interfaces\\IUnitOfWork.cs",
+  "PreviewInSolutionExplorer": false
+}

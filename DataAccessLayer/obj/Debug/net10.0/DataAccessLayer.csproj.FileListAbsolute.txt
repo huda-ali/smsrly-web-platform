@@ -1,0 +1,28 @@
+C:\Users\Mahmoud\source\repos\DepiDataBase\DataAccessLayer\bin\Debug\net10.0\DataAccessLayer.deps.json
+C:\Users\Mahmoud\source\repos\DepiDataBase\DataAccessLayer\bin\Debug\net10.0\DataAccessLayer.runtimeconfig.json
+C:\Users\Mahmoud\source\repos\DepiDataBase\DataAccessLayer\bin\Debug\net10.0\DataAccessLayer.dll
+C:\Users\Mahmoud\source\repos\DepiDataBase\DataAccessLayer\bin\Debug\net10.0\DataAccessLayer.pdb
+C:\Users\Mahmoud\source\repos\DepiDataBase\DataAccessLayer\obj\Debug\net10.0\DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\Mahmoud\source\repos\DepiDataBase\DataAccessLayer\obj\Debug\net10.0\DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mahmoud\source\repos\DepiDataBase\DataAccessLayer\obj\Debug\net10.0\DataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\Mahmoud\source\repos\DepiDataBase\DataAccessLayer\obj\Debug\net10.0\DataAccessLayer.AssemblyInfo.cs
+C:\Users\Mahmoud\source\repos\DepiDataBase\DataAccessLayer\obj\Debug\net10.0\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\Mahmoud\source\repos\DepiDataBase\DataAccessLayer\obj\Debug\net10.0\DataAccessLayer.dll
+C:\Users\Mahmoud\source\repos\DepiDataBase\DataAccessLayer\obj\Debug\net10.0\refint\DataAccessLayer.dll
+C:\Users\Mahmoud\source\repos\DepiDataBase\DataAccessLayer\obj\Debug\net10.0\DataAccessLayer.pdb
+C:\Users\Mahmoud\source\repos\DepiDataBase\DataAccessLayer\obj\Debug\net10.0\DataAccessLayer.genruntimeconfig.cache
+C:\Users\Mahmoud\source\repos\DepiDataBase\DataAccessLayer\obj\Debug\net10.0\ref\DataAccessLayer.dll
+C:\Users\ragha\OneDrive\Desktop\Examination system\DepiDataBase\DepiDataBase\DataAccessLayer\obj\Debug\net10.0\DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\ragha\OneDrive\Desktop\Examination system\DepiDataBase\DepiDataBase\DataAccessLayer\obj\Debug\net10.0\DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ragha\OneDrive\Desktop\Examination system\DepiDataBase\DepiDataBase\DataAccessLayer\obj\Debug\net10.0\DataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\ragha\OneDrive\Desktop\Examination system\DepiDataBase\DepiDataBase\DataAccessLayer\obj\Debug\net10.0\DataAccessLayer.AssemblyInfo.cs
+C:\Users\ragha\OneDrive\Desktop\Examination system\DepiDataBase\DepiDataBase\DataAccessLayer\obj\Debug\net10.0\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\ragha\OneDrive\Desktop\Examination system\DepiDataBase\DepiDataBase\DataAccessLayer\obj\Debug\net10.0\DataAccessLayer.dll
+C:\Users\ragha\OneDrive\Desktop\Examination system\DepiDataBase\DepiDataBase\DataAccessLayer\obj\Debug\net10.0\refint\DataAccessLayer.dll
+C:\Users\ragha\OneDrive\Desktop\Examination system\DepiDataBase\DepiDataBase\DataAccessLayer\obj\Debug\net10.0\DataAccessLayer.pdb
+C:\Users\ragha\OneDrive\Desktop\Examination system\DepiDataBase\DepiDataBase\DataAccessLayer\bin\Debug\net10.0\DataAccessLayer.deps.json
+C:\Users\ragha\OneDrive\Desktop\Examination system\DepiDataBase\DepiDataBase\DataAccessLayer\bin\Debug\net10.0\DataAccessLayer.runtimeconfig.json
+C:\Users\ragha\OneDrive\Desktop\Examination system\DepiDataBase\DepiDataBase\DataAccessLayer\bin\Debug\net10.0\DataAccessLayer.dll
+C:\Users\ragha\OneDrive\Desktop\Examination system\DepiDataBase\DepiDataBase\DataAccessLayer\bin\Debug\net10.0\DataAccessLayer.pdb
+C:\Users\ragha\OneDrive\Desktop\Examination system\DepiDataBase\DepiDataBase\DataAccessLayer\obj\Debug\net10.0\DataAccessLayer.genruntimeconfig.cache
+C:\Users\ragha\OneDrive\Desktop\Examination system\DepiDataBase\DepiDataBase\DataAccessLayer\obj\Debug\net10.0\ref\DataAccessLayer.dll

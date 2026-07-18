@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Bll/Bll.csproj" Id="ee00b3d8-ad2b-4ab2-8514-e242a6eee6a2" />
+  <Project Path="DataAccessLayer/DataAccessLayer.csproj" />
+  <Project Path="DepiDataBase/DepiProject.csproj" />
+</Solution>

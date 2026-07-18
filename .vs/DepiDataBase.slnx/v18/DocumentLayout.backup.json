@@ -1,0 +1,588 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Interfaces\\IUnitOfWork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Bll\\Interfaces\\IUnitOfWork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Repositories\\UnitOfWork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Bll\\Repositories\\UnitOfWork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Repositories\\PreferencesRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Bll\\Repositories\\PreferencesRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Interfaces\\IPreferencesRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Bll\\Interfaces\\IPreferencesRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\DataAccessLayer\\AppContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DataAccessLayer\\AppContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\DataAccessLayer\\ModelContetxt\\Preferences.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DataAccessLayer\\ModelContetxt\\Preferences.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\DataAccessLayer\\ModelContetxt\\Tenant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DataAccessLayer\\ModelContetxt\\Tenant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\DataAccessLayer\\Configures\\PreferencesConfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DataAccessLayer\\Configures\\PreferencesConfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\DataAccessLayer\\Configures\\AdminConfigure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DataAccessLayer\\Configures\\AdminConfigure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Repositories\\OwnerRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Bll\\Repositories\\OwnerRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Repositories\\UserRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Bll\\Repositories\\UserRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Repositories\\TenantRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Bll\\Repositories\\TenantRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Repositories\\ServiceRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Bll\\Repositories\\ServiceRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Repositories\\ReviewRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Bll\\Repositories\\ReviewRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Repositories\\PropertyRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Bll\\Repositories\\PropertyRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Repositories\\MessageRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Bll\\Repositories\\MessageRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Repositories\\GenericRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Bll\\Repositories\\GenericRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Repositories\\AdminRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Bll\\Repositories\\AdminRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Interfaces\\IUserRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Bll\\Interfaces\\IUserRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Interfaces\\ITenantRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Bll\\Interfaces\\ITenantRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Interfaces\\IServiceRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Bll\\Interfaces\\IServiceRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Interfaces\\IReviewRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Bll\\Interfaces\\IReviewRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Interfaces\\IPropertyRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Bll\\Interfaces\\IPropertyRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Interfaces\\IOwnerRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Bll\\Interfaces\\IOwnerRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Interfaces\\IMessageRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Bll\\Interfaces\\IMessageRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Interfaces\\IGenericRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Bll\\Interfaces\\IGenericRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Interfaces\\IAdminRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Bll\\Interfaces\\IAdminRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\DataAccessLayer\\ModelContetxt\\Review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DataAccessLayer\\ModelContetxt\\Review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\DataAccessLayer\\ModelContetxt\\Message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DataAccessLayer\\ModelContetxt\\Message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\DataAccessLayer\\Configures\\ReviewConfigure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DataAccessLayer\\Configures\\ReviewConfigure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\DataAccessLayer\\Configures\\OwnerConfigure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DataAccessLayer\\Configures\\OwnerConfigure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\DataAccessLayer\\Configures\\TenantConfigure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DataAccessLayer\\Configures\\TenantConfigure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 11,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{c6f34f0d-7ae5-4f3a-be61-fe0c21ae9eb8}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PreferencesRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Repositories\\PreferencesRepository.cs",
+              "RelativeDocumentMoniker": "Bll\\Repositories\\PreferencesRepository.cs",
+              "ToolTip": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Repositories\\PreferencesRepository.cs",
+              "RelativeToolTip": "Bll\\Repositories\\PreferencesRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-28T19:58:08.223Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IPreferencesRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Interfaces\\IPreferencesRepository.cs",
+              "RelativeDocumentMoniker": "Bll\\Interfaces\\IPreferencesRepository.cs",
+              "ToolTip": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Interfaces\\IPreferencesRepository.cs",
+              "RelativeToolTip": "Bll\\Interfaces\\IPreferencesRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-28T19:55:26.329Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Preferences.cs",
+              "DocumentMoniker": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\DataAccessLayer\\ModelContetxt\\Preferences.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\ModelContetxt\\Preferences.cs",
+              "ToolTip": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\DataAccessLayer\\ModelContetxt\\Preferences.cs",
+              "RelativeToolTip": "DataAccessLayer\\ModelContetxt\\Preferences.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-28T19:10:24.804Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Repositories\\UnitOfWork.cs",
+              "RelativeDocumentMoniker": "Bll\\Repositories\\UnitOfWork.cs",
+              "ToolTip": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Repositories\\UnitOfWork.cs",
+              "RelativeToolTip": "Bll\\Repositories\\UnitOfWork.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-28T15:10:48.764Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AdminConfigure.cs",
+              "DocumentMoniker": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\DataAccessLayer\\Configures\\AdminConfigure.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\Configures\\AdminConfigure.cs",
+              "ToolTip": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\DataAccessLayer\\Configures\\AdminConfigure.cs",
+              "RelativeToolTip": "DataAccessLayer\\Configures\\AdminConfigure.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-28T18:39:47.368Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "IUnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Interfaces\\IUnitOfWork.cs",
+              "RelativeDocumentMoniker": "Bll\\Interfaces\\IUnitOfWork.cs",
+              "ToolTip": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Interfaces\\IUnitOfWork.cs",
+              "RelativeToolTip": "Bll\\Interfaces\\IUnitOfWork.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-28T14:30:06.361Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "Bll\\Repositories\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "Bll\\Repositories\\UserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-28T15:13:15.341Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Tenant.cs",
+              "DocumentMoniker": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\DataAccessLayer\\ModelContetxt\\Tenant.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\ModelContetxt\\Tenant.cs",
+              "ToolTip": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\DataAccessLayer\\ModelContetxt\\Tenant.cs",
+              "RelativeToolTip": "DataAccessLayer\\ModelContetxt\\Tenant.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-28T15:34:28.927Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AppContext.cs",
+              "DocumentMoniker": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\DataAccessLayer\\AppContext.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\AppContext.cs",
+              "ToolTip": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\DataAccessLayer\\AppContext.cs",
+              "RelativeToolTip": "DataAccessLayer\\AppContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-28T15:39:11.92Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PreferencesConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\DataAccessLayer\\Configures\\PreferencesConfiguration.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\Configures\\PreferencesConfiguration.cs",
+              "ToolTip": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\DataAccessLayer\\Configures\\PreferencesConfiguration.cs",
+              "RelativeToolTip": "DataAccessLayer\\Configures\\PreferencesConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-28T19:13:19.246Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "TenantRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Repositories\\TenantRepository.cs",
+              "RelativeDocumentMoniker": "Bll\\Repositories\\TenantRepository.cs",
+              "ToolTip": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Repositories\\TenantRepository.cs",
+              "RelativeToolTip": "Bll\\Repositories\\TenantRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-28T15:15:40.092Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ServiceRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Repositories\\ServiceRepository.cs",
+              "RelativeDocumentMoniker": "Bll\\Repositories\\ServiceRepository.cs",
+              "ToolTip": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Repositories\\ServiceRepository.cs",
+              "RelativeToolTip": "Bll\\Repositories\\ServiceRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-28T15:18:58.323Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "OwnerRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Repositories\\OwnerRepository.cs",
+              "RelativeDocumentMoniker": "Bll\\Repositories\\OwnerRepository.cs",
+              "ToolTip": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Repositories\\OwnerRepository.cs",
+              "RelativeToolTip": "Bll\\Repositories\\OwnerRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-28T15:14:50.171Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ReviewRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Repositories\\ReviewRepository.cs",
+              "RelativeDocumentMoniker": "Bll\\Repositories\\ReviewRepository.cs",
+              "ToolTip": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Repositories\\ReviewRepository.cs",
+              "RelativeToolTip": "Bll\\Repositories\\ReviewRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-28T15:18:04.024Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "PropertyRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Repositories\\PropertyRepository.cs",
+              "RelativeDocumentMoniker": "Bll\\Repositories\\PropertyRepository.cs",
+              "ToolTip": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Repositories\\PropertyRepository.cs",
+              "RelativeToolTip": "Bll\\Repositories\\PropertyRepository.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAYwBQAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-28T15:16:17.835Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "MessageRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Repositories\\MessageRepository.cs",
+              "RelativeDocumentMoniker": "Bll\\Repositories\\MessageRepository.cs",
+              "ToolTip": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Repositories\\MessageRepository.cs",
+              "RelativeToolTip": "Bll\\Repositories\\MessageRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-28T15:17:08.42Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "GenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Repositories\\GenericRepository.cs",
+              "RelativeDocumentMoniker": "Bll\\Repositories\\GenericRepository.cs",
+              "ToolTip": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Repositories\\GenericRepository.cs",
+              "RelativeToolTip": "Bll\\Repositories\\GenericRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-28T15:12:03.743Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "AdminRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Repositories\\AdminRepository.cs",
+              "RelativeDocumentMoniker": "Bll\\Repositories\\AdminRepository.cs",
+              "ToolTip": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Repositories\\AdminRepository.cs",
+              "RelativeToolTip": "Bll\\Repositories\\AdminRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-28T15:14:13.041Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Interfaces\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "Bll\\Interfaces\\IUserRepository.cs",
+              "ToolTip": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Interfaces\\IUserRepository.cs",
+              "RelativeToolTip": "Bll\\Interfaces\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-28T14:32:08.687Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ITenantRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Interfaces\\ITenantRepository.cs",
+              "RelativeDocumentMoniker": "Bll\\Interfaces\\ITenantRepository.cs",
+              "ToolTip": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Interfaces\\ITenantRepository.cs",
+              "RelativeToolTip": "Bll\\Interfaces\\ITenantRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-28T15:05:30.097Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "IServiceRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Interfaces\\IServiceRepository.cs",
+              "RelativeDocumentMoniker": "Bll\\Interfaces\\IServiceRepository.cs",
+              "ToolTip": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Interfaces\\IServiceRepository.cs",
+              "RelativeToolTip": "Bll\\Interfaces\\IServiceRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-28T15:08:38.07Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "IReviewRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Interfaces\\IReviewRepository.cs",
+              "RelativeDocumentMoniker": "Bll\\Interfaces\\IReviewRepository.cs",
+              "ToolTip": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Interfaces\\IReviewRepository.cs",
+              "RelativeToolTip": "Bll\\Interfaces\\IReviewRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-28T15:07:58.397Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "IPropertyRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Interfaces\\IPropertyRepository.cs",
+              "RelativeDocumentMoniker": "Bll\\Interfaces\\IPropertyRepository.cs",
+              "ToolTip": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Interfaces\\IPropertyRepository.cs",
+              "RelativeToolTip": "Bll\\Interfaces\\IPropertyRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-28T15:06:38.81Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "IOwnerRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Interfaces\\IOwnerRepository.cs",
+              "RelativeDocumentMoniker": "Bll\\Interfaces\\IOwnerRepository.cs",
+              "ToolTip": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Interfaces\\IOwnerRepository.cs",
+              "RelativeToolTip": "Bll\\Interfaces\\IOwnerRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-28T14:35:14.923Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "IMessageRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Interfaces\\IMessageRepository.cs",
+              "RelativeDocumentMoniker": "Bll\\Interfaces\\IMessageRepository.cs",
+              "ToolTip": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Interfaces\\IMessageRepository.cs",
+              "RelativeToolTip": "Bll\\Interfaces\\IMessageRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-28T15:07:20.988Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "IGenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Interfaces\\IGenericRepository.cs",
+              "RelativeDocumentMoniker": "Bll\\Interfaces\\IGenericRepository.cs",
+              "ToolTip": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Interfaces\\IGenericRepository.cs",
+              "RelativeToolTip": "Bll\\Interfaces\\IGenericRepository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-28T14:17:26.083Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "IAdminRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Interfaces\\IAdminRepository.cs",
+              "RelativeDocumentMoniker": "Bll\\Interfaces\\IAdminRepository.cs",
+              "ToolTip": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\Bll\\Interfaces\\IAdminRepository.cs",
+              "RelativeToolTip": "Bll\\Interfaces\\IAdminRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-28T14:33:59.844Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Review.cs",
+              "DocumentMoniker": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\DataAccessLayer\\ModelContetxt\\Review.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\ModelContetxt\\Review.cs",
+              "ToolTip": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\DataAccessLayer\\ModelContetxt\\Review.cs",
+              "RelativeToolTip": "DataAccessLayer\\ModelContetxt\\Review.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-28T15:34:53.292Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Message.cs",
+              "DocumentMoniker": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\DataAccessLayer\\ModelContetxt\\Message.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\ModelContetxt\\Message.cs",
+              "ToolTip": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\DataAccessLayer\\ModelContetxt\\Message.cs",
+              "RelativeToolTip": "DataAccessLayer\\ModelContetxt\\Message.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwBYAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-28T15:35:42.025Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "ReviewConfigure.cs",
+              "DocumentMoniker": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\DataAccessLayer\\Configures\\ReviewConfigure.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\Configures\\ReviewConfigure.cs",
+              "ToolTip": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\DataAccessLayer\\Configures\\ReviewConfigure.cs",
+              "RelativeToolTip": "DataAccessLayer\\Configures\\ReviewConfigure.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-28T18:39:51.796Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "OwnerConfigure.cs",
+              "DocumentMoniker": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\DataAccessLayer\\Configures\\OwnerConfigure.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\Configures\\OwnerConfigure.cs",
+              "ToolTip": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\DataAccessLayer\\Configures\\OwnerConfigure.cs",
+              "RelativeToolTip": "DataAccessLayer\\Configures\\OwnerConfigure.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-28T18:39:50.13Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "TenantConfigure.cs",
+              "DocumentMoniker": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\DataAccessLayer\\Configures\\TenantConfigure.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\Configures\\TenantConfigure.cs",
+              "ToolTip": "C:\\Users\\ragha\\OneDrive\\Desktop\\Examination system\\DepiDataBase\\DepiDataBase\\DataAccessLayer\\Configures\\TenantConfigure.cs",
+              "RelativeToolTip": "DataAccessLayer\\Configures\\TenantConfigure.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-28T15:36:11.943Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
