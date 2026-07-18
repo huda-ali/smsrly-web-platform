@@ -23,8 +23,17 @@ export const useAuthStore = create((set) => ({
     }),
 }));
 
-export const getAccessToken = () =>
-  useAuthStore.getState().accessToken;
+export const getAccessToken = () => useAuthStore.getState().accessToken;
 
-export const clearAuth = () =>
-  useAuthStore.getState().clearAuth();
+export const clearAuth = () => useAuthStore.getState().clearAuth();
+
+export const getRefreshToken = () => useAuthStore.getState().refreshToken;
+
+export const setAuthTokens = ({ accessToken, refreshToken }) => {
+  const state = useAuthStore.getState();
+  state.setAuth({
+    accessToken,
+    refreshToken,
+    role: state.role,
+  });
+};

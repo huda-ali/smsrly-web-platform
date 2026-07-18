@@ -8,10 +8,10 @@ export default function SignUpPage() {
   const { signup, user } = useAuth();
   const { platformSettings } = usePlatform();
   const [role, setRole] = useState("tenant");
- const [firstName, setFirstName] = useState("");
-const [lastName, setLastName] = useState("");
-const [nationalID, setNationalID] = useState("");
-const [businessTaxID, setBusinessTaxID] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [nationalID, setNationalID] = useState("");
+  const [businessTaxID, setBusinessTaxID] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
@@ -28,24 +28,24 @@ const [businessTaxID, setBusinessTaxID] = useState("");
     e.preventDefault();
     setError("");
     if (!firstName.trim()) {
-  setError("First name is required.");
-  return;
-}
+      setError("First name is required.");
+      return;
+    }
 
-if (!lastName.trim()) {
-  setError("Last name is required.");
-  return;
-}
+    if (!lastName.trim()) {
+      setError("Last name is required.");
+      return;
+    }
 
-if (!nationalID.trim()) {
-  setError("National ID is required.");
-  return;
-}
+    if (!nationalID.trim()) {
+      setError("National ID is required.");
+      return;
+    }
 
-if (role === "owner" && !businessTaxID.trim()) {
-  setError("Business Tax ID is required.");
-  return;
-}
+    if (role === "owner" && !businessTaxID.trim()) {
+      setError("Business Tax ID is required.");
+      return;
+    }
     if (!email.trim()) {
       setError("Email is required.");
       return;
@@ -61,15 +61,15 @@ if (role === "owner" && !businessTaxID.trim()) {
     setLoading(true);
     await new Promise((r) => setTimeout(r, 350));
     const result = await signup({
-  firstName,
-  lastName,
-  nationalID,
-  phoneNumber: phone,
-  email,
-  password,
-  businessTaxID,
-  role: role === "owner" ? "Owner" : "Tenant",
-});
+      firstName,
+      lastName,
+      nationalID,
+      phoneNumber: phone,
+      email,
+      password,
+      businessTaxID,
+      role: role === "owner" ? "Owner" : "Tenant",
+    });
     setLoading(false);
     if (!result.success) {
       setError(result.error);
@@ -151,28 +151,28 @@ if (role === "owner" && !businessTaxID.trim()) {
 
           <form onSubmit={handleSubmit} noValidate>
             {[
-             {
-  label: "First Name",
-  type: "text",
-  ph: "John",
-  icon: "fa-user",
-  val: firstName,
-  set: setFirstName,
-},
-{
-  label: "Last Name",
-  type: "text",
-  ph: "Doe",
-  icon: "fa-user",
-  val: lastName,
-  set: setLastName,
-},
-{
-  label: "National ID",
-  type: "text",
-  ph: "298xxxxxxxxxxxxx",
-  icon: "fa-id-card",
-  val: nationalID,
+              {
+                label: "First Name",
+                type: "text",
+                ph: "John",
+                icon: "fa-user",
+                val: firstName,
+                set: setFirstName,
+              },
+              {
+                label: "Last Name",
+                type: "text",
+                ph: "Doe",
+                icon: "fa-user",
+                val: lastName,
+                set: setLastName,
+              },
+              {
+                label: "National ID",
+                type: "text",
+                ph: "298xxxxxxxxxxxxx",
+                icon: "fa-id-card",
+                val: nationalID,
                 set: setNationalID,
               },
               {
