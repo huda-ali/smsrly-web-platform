@@ -1,0 +1,143 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: realestate_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: realestate
+      POSTGRES_PASSWORD: realestate_pass
+      POSTGRES_DB: realestate_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U realestate -d realestate_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    container_name: realestate_redis
+    restart: unless-stopped
+    command: redis-server --maxmemory 512mb --maxmemory-policy allkeys-lru
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: runtime
+    container_name: realestate_api
+    restart: unless-stopped
+    env_file:
+      - .env.example
+    environment:
+      DATABASE_URL: postgresql+asyncpg://realestate:realestate_pass@db:5432/realestate_db
+      DATABASE_URL_SYNC: postgresql+psycopg2://realestate:realestate_pass@db:5432/realestate_db
+      REDIS_URL: redis://redis:6379/0
+      CELERY_BROKER_URL: redis://redis:6379/1
+      CELERY_RESULT_BACKEND: redis://redis:6379/2
+      MODEL_DIR: /app/models
+      LOG_FILE: /app/logs/app.log
+    volumes:
+      - models_volume:/app/models
+      - logs_volume:/app/logs
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    command: >
+      sh -c "
+        echo 'Running Alembic migrations...' &&
+        alembic upgrade head &&
+        echo 'Starting API...' &&
+        uvicorn app.main:app --host 0.0.0.0 --port 8000 --workers 2
+      "
+
+  worker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: runtime
+    container_name: realestate_worker
+    restart: unless-stopped
+    env_file:
+      - .env.example
+    environment:
+      DATABASE_URL: postgresql+asyncpg://realestate:realestate_pass@db:5432/realestate_db
+      DATABASE_URL_SYNC: postgresql+psycopg2://realestate:realestate_pass@db:5432/realestate_db
+      REDIS_URL: redis://redis:6379/0
+      CELERY_BROKER_URL: redis://redis:6379/1
+      CELERY_RESULT_BACKEND: redis://redis:6379/2
+      MODEL_DIR: /app/models
+      LOG_FILE: /app/logs/worker.log
+    volumes:
+      - models_volume:/app/models
+      - logs_volume:/app/logs
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    command: celery -A services.workers.celery_app worker --loglevel=info --queues=default,scraping,ml,geocoding --concurrency=4
+
+  beat:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: runtime
+    container_name: realestate_beat
+    restart: unless-stopped
+    env_file:
+      - .env.example
+    environment:
+      DATABASE_URL: postgresql+asyncpg://realestate:realestate_pass@db:5432/realestate_db
+      REDIS_URL: redis://redis:6379/0
+      CELERY_BROKER_URL: redis://redis:6379/1
+      CELERY_RESULT_BACKEND: redis://redis:6379/2
+      MODEL_DIR: /app/models
+      LOG_FILE: /app/logs/beat.log
+    volumes:
+      - models_volume:/app/models
+      - logs_volume:/app/logs
+    depends_on:
+      - worker
+    command: celery -A services.workers.celery_app beat --loglevel=info --scheduler celery.beat:PersistentScheduler
+
+  flower:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: runtime
+    container_name: realestate_flower
+    restart: unless-stopped
+    environment:
+      CELERY_BROKER_URL: redis://redis:6379/1
+      CELERY_RESULT_BACKEND: redis://redis:6379/2
+    ports:
+      - "5555:5555"
+    depends_on:
+      - worker
+    command: celery -A services.workers.celery_app flower --port=5555
+
+volumes:
+  postgres_data:
+  models_volume:
+  logs_volume:
+
+networks:
+  default:
+    name: realestate_network

@@ -1,3 +1,4 @@
+# frontend
 frontend/logs
 frontend/*.log
 frontend/npm-debug.log*
@@ -11,14 +12,17 @@ frontend/dist-ssr/
 frontend/*.local
 frontend/.vscode/*
 !frontend/.vscode/extensions.json
-frontend/.idea/
 frontend/.vs/
+frontend/.idea/
 frontend/.DS_Store
 frontend/*.suo
 frontend/*.ntvs*
 frontend/*.njsproj
 frontend/*.sln
 frontend/*.sw?
+frontend/.env
+
+# backend
 backend/WebApplication1/jwtsettings.json
 backend/WebApplication1/corssettings.json
 backend/WebApplication1/mlapisettings.json
@@ -26,6 +30,8 @@ backend/WebApplication1/appsettings.Development.json
 **/bin/
 **/obj/
 **/node_modules/
-frontend/.env
 backend/.vs/
 backend/.idea/
+
+# ml
+ml/.env
