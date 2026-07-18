@@ -1,0 +1,45 @@
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 5px 12px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  color: #334155;
+  transition: all 0.15s;
+}
+
+.toggle:hover {
+  border-color: #2563eb;
+  color: #2563eb;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+@media (max-width: 480px) {
+  .label {
+    display: none;
+  }
+
+  .toggle {
+    padding: 7px 9px;
+  }
+}
+
+/* Dark mode */
+:global([data-theme='dark']) .toggle {
+  border-color: #253148;
+  color: #c2cee4;
+}
+
+:global([data-theme='dark']) .toggle:hover {
+  border-color: #5b9dff;
+  color: #5b9dff;
+}
