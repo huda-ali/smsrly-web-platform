@@ -4,6 +4,22 @@ import { useAuthStore } from "../store/authStore";
 import { createContext, useContext, useState, useCallback } from "react";
 import { MOCK_ACCOUNTS, INITIAL_PROPERTIES } from "../data/mockData";
 
+function decodeJwt(token) {
+  try {
+    const base64Url = token.split(".")[1];
+    const base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
+    const json = decodeURIComponent(
+      atob(base64)
+        .split("")
+        .map((c) => "%" + c.charCodeAt(0).toString(16).padStart(2, "0"))
+        .join(""),
+    );
+    return JSON.parse(json);
+  } catch {
+    return {};
+  }
+}
+
 const AuthContext = createContext(null);
 const PropertyContext = createContext(null);
 const NotificationContext = createContext(null);
@@ -215,106 +231,163 @@ export function AuthProvider({ children }) {
   }, []);
 
   const login = useCallback(
-  async (email, password) => {
-    try {
-      const data = await loginApi(email, password);
-      const backendUser = data.user || data;
+    async (email, password) => {
+      try {
+        const data = await loginApi(email, password);
+        const backendUser = data.user || data;
+        const token = data.accessToken || data.token;
+        const claims = token ? decodeJwt(token) : {};
 
-      const rawRole = backendUser.Role || backendUser.role || backendUser.userType;
-      let formattedRole = "";
-      if (rawRole) {
-        const roleStr = rawRole.toString().toLowerCase();
-        if (roleStr === "admin") formattedRole = "Admin";
-        else if (roleStr === "owner") formattedRole = "Owner";
-        else if (roleStr === "tenant") formattedRole = "Tenant";
-      }
+        const rawRole =
+          backendUser.Role || backendUser.role || backendUser.userType;
+        let formattedRole = "";
+        if (rawRole) {
+          const roleStr = rawRole.toString().toLowerCase();
+          if (roleStr === "admin") formattedRole = "admin";
+          else if (roleStr === "owner") formattedRole = "owner";
+          else if (roleStr === "tenant") formattedRole = "tenant";
+        }
 
-      const safeUser = {
-        id: backendUser.usserId || backendUser.id,
-        email: backendUser.email || email,
-        role: formattedRole,
-        name: backendUser.firstName 
-          ? `${backendUser.firstName} ${backendUser.lastName || ''}`.trim() 
-          : (backendUser.name || email.split('@')[0]),
-        accessToken: data.accessToken || data.token,
-        refreshToken: data.refreshToken,
-      };
+        const id =
+          backendUser.usserId ||
+          backendUser.id ||
+          claims.sub ||
+          claims.nameid ||
+          claims[
+            "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier"
+          ];
+        const directoryRecord = allUsers.find((u) => u.id === id);
 
-      useAuthStore.getState().setAuth({
-        accessToken: safeUser.accessToken,
-        refreshToken: safeUser.refreshToken,
-        role: safeUser.role,
-        isAuthenticated: true
-      });
+        const safeUser = {
+          id,
+          email: backendUser.email || claims.email || email,
+          role: formattedRole,
+          name: backendUser.firstName
+            ? `${backendUser.firstName} ${backendUser.lastName || ""}`.trim()
+            : directoryRecord?.name || backendUser.name || email.split("@")[0],
+          phone: directoryRecord?.phone || backendUser.phone || "",
+          avatar: directoryRecord?.avatar,
+          accessToken: token,
+          refreshToken: data.refreshToken,
+        };
 
-      setUser(safeUser);
-      localStorage.setItem("smsrly_user", JSON.stringify(safeUser));
-
-      return {
-        success: true,
-        user: safeUser,
-      };
-    } catch (err) {
-      return {
-        success: false,
-        error:
-          err.response?.status === 401
-            ? "Invalid email or password."
-            : describeError(err),
-      };
-    }
-  },
-  []
-);
- const signup = useCallback(
-  async (userData) => {
-    try {
-      let data;
-
-      if (userData.role.toLowerCase() === "owner") {
-        data = await registerOwner({
-          firstName: userData.firstName,
-          lastName: userData.lastName,
-          nationalID: userData.nationalID,
-          phoneNumber: userData.phoneNumber,
-          email: userData.email,
-          password: userData.password,
-          businessTaxID: userData.businessTaxID,
+        useAuthStore.getState().setAuth({
+          accessToken: safeUser.accessToken,
+          refreshToken: safeUser.refreshToken,
+          role: safeUser.role,
+          isAuthenticated: true,
         });
-      } else {
-        data = await registerTenant({
-          firstName: userData.firstName,
-          lastName: userData.lastName,
-          nationalID: userData.nationalID,
-          phoneNumber: userData.phoneNumber,
-          email: userData.email,
-          password: userData.password,
-        });
+
+        setUser(safeUser);
+        localStorage.setItem("smsrly_user", JSON.stringify(safeUser));
+        if (id) touchUserActivity(id);
+
+        return {
+          success: true,
+          user: safeUser,
+        };
+      } catch (err) {
+        return {
+          success: false,
+          error:
+            err.response?.status === 401
+              ? "Invalid email or password."
+              : describeError(err),
+        };
       }
+    },
+    [allUsers, touchUserActivity],
+  );
+  const signup = useCallback(
+    async (userData) => {
+      try {
+        let data;
 
-      const safeUser = {
-        email: userData.email,
-        role: data.role?.toLowerCase(),
-        accessToken: data.accessToken,
-        refreshToken: data.refreshToken,
-      };
+        if (userData.role.toLowerCase() === "owner") {
+          data = await registerOwner({
+            firstName: userData.firstName,
+            lastName: userData.lastName,
+            nationalID: userData.nationalID,
+            phoneNumber: userData.phoneNumber,
+            email: userData.email,
+            password: userData.password,
+            businessTaxID: userData.businessTaxID,
+          });
+        } else {
+          data = await registerTenant({
+            firstName: userData.firstName,
+            lastName: userData.lastName,
+            nationalID: userData.nationalID,
+            phoneNumber: userData.phoneNumber,
+            email: userData.email,
+            password: userData.password,
+          });
+        }
 
-      setUser(safeUser);
-      localStorage.setItem("smsrly_user", JSON.stringify(safeUser));
+        const token = data.accessToken || data.token;
+        const claims = token ? decodeJwt(token) : {};
 
-      return {
-        success: true,
-        user: safeUser,
-      };
-    } catch (err) {
-      return {
-        success: false,
-        error: describeError(err),
-      };
-    }
-  },
-  []
-);
+        const id =
+          data.usserId ||
+          data.id ||
+          claims.sub ||
+          claims.nameid ||
+          claims[
+            "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier"
+          ] ||
+          `${userData.role.toLowerCase()}_${Date.now()}`;
+
+        const name =
+          `${userData.firstName || ""} ${userData.lastName || ""}`.trim();
+        const phone = (userData.phoneNumber || "").trim();
+        const role = data.role?.toLowerCase() || userData.role.toLowerCase();
+
+        const safeUser = {
+          id,
+          email: userData.email,
+          role,
+          name,
+          phone,
+          accessToken: token,
+          refreshToken: data.refreshToken,
+        };
+
+        useAuthStore.getState().setAuth({
+          accessToken: safeUser.accessToken,
+          refreshToken: safeUser.refreshToken,
+          role: safeUser.role,
+          isAuthenticated: true,
+        });
+
+        setUser(safeUser);
+        localStorage.setItem("smsrly_user", JSON.stringify(safeUser));
+
+        upsertAllUser({
+          id,
+          name,
+          email: userData.email,
+          role,
+          phone,
+          status: "Verified",
+          verified: true,
+          provider: "email",
+          joined: Date.now(),
+          lastActivity: Date.now(),
+        });
+
+        return {
+          success: true,
+          user: safeUser,
+        };
+      } catch (err) {
+        return {
+          success: false,
+          error: describeError(err),
+        };
+      }
+    },
+    [upsertAllUser],
+  );
   const socialAuth = useCallback(
     (provider, email, name) => {
       const cleanEmail = email.trim().toLowerCase();

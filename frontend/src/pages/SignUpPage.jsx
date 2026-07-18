@@ -46,6 +46,10 @@ export default function SignUpPage() {
       setError("Email is required.");
       return;
     }
+    if (!phone.trim()) {
+      setError("Phone number is required.");
+      return;
+    }
     if (password.length < 6) {
       setError("Password must be at least 6 characters.");
       return;
@@ -180,7 +184,7 @@ export default function SignUpPage() {
                 set: setEmail,
               },
               {
-                label: "Phone (optional)",
+                label: "Phone",
                 type: "tel",
                 ph: "(555) 123-4567",
                 icon: "fa-phone",
@@ -198,7 +202,7 @@ export default function SignUpPage() {
                     value={f.val}
                     onChange={(e) => f.set(e.target.value)}
                     className={styles.input}
-                    required={!f.label.includes("optional")}
+                    required
                   />
                 </div>
               </div>
