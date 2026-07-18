@@ -143,7 +143,7 @@ export default function SearchPage() {
         <input
           type="range"
           min="500"
-          max="10000"
+          max="15000"
           step="100"
           value={maxPrice}
           onChange={(e) => setMaxPrice(+e.target.value)}
