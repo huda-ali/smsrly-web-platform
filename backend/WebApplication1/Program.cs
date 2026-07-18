@@ -65,14 +65,36 @@ builder.Services.AddHttpClient<IMlApiClient, MlApiClient>(client =>
 
 var app = builder.Build();
 
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<DataAccessLayer.AppContext>();
+    if (!db.Set<DataAccessLayer.Classes.Admin>().Any())
+    {
+        var defaultEmail = app.Configuration["DefaultAdmin:Email"] ?? "admin@smsrly.com";
+        var defaultPassword = app.Configuration["DefaultAdmin:Password"] ?? "Admin@12345";
+
+        db.Add(new DataAccessLayer.Classes.Admin
+        {
+            FirstName = app.Configuration["DefaultAdmin:FirstName"] ?? "System",
+            LastName = app.Configuration["DefaultAdmin:LastName"] ?? "Admin",
+            NationalID = app.Configuration["DefaultAdmin:NationalID"] ?? "00000000000000",
+            PhoneNumber = app.Configuration["DefaultAdmin:PhoneNumber"] ?? "0000000000",
+            Email = defaultEmail,
+            Password = BCrypt.Net.BCrypt.HashPassword(defaultPassword),
+        });
+        db.SaveChanges();
+
+        app.Logger.LogWarning(
+            "No admin account existed — seeded a default admin. Email: {Email} Password: {Password}. " +
+            "Sign in and change this password immediately, or set DefaultAdmin:Email/DefaultAdmin:Password in configuration before first run.",
+            defaultEmail, defaultPassword);
+    }
+}
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI(c =>
-    {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API v1");
-        c.DisplayRequestDuration();
-    });
+    app.UseSwaggerUI();
 }
 
 app.UseHttpsRedirection();

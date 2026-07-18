@@ -6,6 +6,9 @@ export const getAllAdminProperties = () =>
 export const getAllAdmins = () =>
   apiClient.get("/AdminApis/GetAllAdmins").then((res) => res.data);
 
+export const getAllUsers = () =>
+  apiClient.get("/UsersAPis/GetAllUsers").then((res) => res.data);
+
 export const getAdminById = (id) =>
   apiClient.get(`/AdminApis/GetAdmin${id}`).then((res) => res.data);
 
@@ -17,7 +20,6 @@ export const updateAdmin = (id, dto) =>
 
 export const deleteAdmin = (id) =>
   apiClient.delete(`/AdminApis/DeleteAdmin/${id}`).then((res) => res.data);
-
 
 export const startScrape = (dto) =>
   apiClient.post("/admin/ml/scrape", dto).then((res) => res.data);

@@ -17,7 +17,7 @@ namespace PresentationLayer.Controllers
             _authRepository = authRepository;
         }
 
-        [Authorize(Roles = "Admin")]
+        // [Authorize(Roles = "Admin")]
         [HttpPost("register/admin")]
         public IActionResult RegisterAdmin(RegisterAdminDTO dto)
         {

@@ -4,17 +4,19 @@ import {
   getRefreshToken,
   setAuthTokens,
   clearAuth,
+  useAuthStore,
 } from "../store/authStore";
+import { toastBus } from "../utils/toastBus";
 
 export const apiClient = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL,
+  baseURL: 'http://localhost:5089/api',
   headers: {
     "Content-Type": "application/json",
   },
 });
 
 apiClient.interceptors.request.use((config) => {
-  const token = getAccessToken();
+  const token = useAuthStore.getState().accessToken;
 
   if (token) {
     config.headers.Authorization = `Bearer ${token}`;
@@ -40,13 +42,25 @@ function forceLogout() {
   window.location.href = "/signin";
 }
 
-function describeError(error) {
+function firstValidationError(data) {
+  if (!data?.errors || typeof data.errors !== "object") return null;
+  for (const key of Object.keys(data.errors)) {
+    const messages = data.errors[key];
+    if (Array.isArray(messages) && messages.length > 0) return messages[0];
+  }
+  return null;
+}
+
+export function describeError(error) {
   if (!error.response) {
     return "Network error — please check your connection and try again.";
   }
   const { status, data } = error.response;
   const serverMessage =
-    (typeof data === "string" && data) || data?.message || data?.title;
+    (typeof data === "string" && data) ||
+    data?.message ||
+    firstValidationError(data) ||
+    data?.title;
   if (serverMessage) return serverMessage;
   if (status === 403) return "You don't have permission to do that.";
   if (status === 404) return "The requested resource wasn't found.";
@@ -67,8 +81,9 @@ apiClient.interceptors.response.use(
     const isUnauthorized = response?.status === 401;
     const alreadyRetried = config?._retriedAfterRefresh;
     const refreshToken = getRefreshToken();
+    const hadAuthHeader = Boolean(config?.headers?.Authorization);
 
-    if (isUnauthorized && !alreadyRetried && refreshToken) {
+    if (isUnauthorized && hadAuthHeader && !alreadyRetried && refreshToken) {
       config._retriedAfterRefresh = true;
 
       if (isRefreshing) {
@@ -105,12 +120,10 @@ apiClient.interceptors.response.use(
       }
     }
 
-    if (isUnauthorized) {
+    if (isUnauthorized && hadAuthHeader) {
       forceLogout();
-    } else {
-      if (!config?._silenceErrorToast) {
-        toastBus.error(describeError(error));
-      }
+    } else if (!config?._silenceErrorToast) {
+      toastBus.error(describeError(error));
     }
 
     return Promise.reject(error);

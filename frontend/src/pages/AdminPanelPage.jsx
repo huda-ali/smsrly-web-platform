@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { useAuth, useProperties, usePlatform } from "../context/AuthContext";
 import { useToast, ToastContainer } from "../hooks/useToast.jsx";
+import { getAllUsers } from "../api/admin";
+import { describeError } from "../api/client";
 import { activityData } from "../data/mockData";
 import {
   AreaChart,
@@ -37,7 +39,11 @@ function timeAgo(ts) {
   if (day < 30) return `${day} day${day === 1 ? "" : "s"} ago`;
   return new Date(ts).toLocaleDateString();
 }
-const roleLabel = (r) => (r ? r.charAt(0).toUpperCase() + r.slice(1) : "—");
+const roleLabel = (r) => {
+  if (!r) return "—";
+  const normalized = r.toLowerCase() === "tentant" ? "tenant" : r;
+  return normalized.charAt(0).toUpperCase() + normalized.slice(1);
+};
 
 export default function AdminPanelPage() {
   const navigate = useNavigate();
@@ -48,6 +54,7 @@ export default function AdminPanelPage() {
     verifyUser,
     flagUser,
     removeUser,
+    upsertAllUser,
     platformSettings,
     updatePlatformSetting,
   } = usePlatform();
@@ -59,6 +66,44 @@ export default function AdminPanelPage() {
   const [deletePropConfirm, setDeletePropConfirm] = useState(null);
   const [userSearch, setUserSearch] = useState("");
   const [propSearch, setPropSearch] = useState("");
+
+  useEffect(() => {
+    let cancelled = false;
+
+    getAllUsers()
+      .then((backendUsers) => {
+        if (cancelled || !Array.isArray(backendUsers)) return;
+
+        const knownEmails = new Set(
+          allUsers.map((u) => (u.email || "").toLowerCase()),
+        );
+
+        backendUsers.forEach((bu) => {
+          const email = (bu.email || "").toLowerCase();
+          if (!email || knownEmails.has(email)) return;
+
+          upsertAllUser({
+            id: `backend_${bu.usserId}`,
+            name: `${bu.firstName || ""} ${bu.lastName || ""}`.trim() || email,
+            email: bu.email,
+            role: (bu.role || "").toLowerCase(),
+            phone: bu.phoneNumber || "",
+            status: "Pending",
+            verified: false,
+            provider: "email",
+            joined: Date.now(),
+            lastActivity: Date.now(),
+          });
+        });
+      })
+      .catch((err) => {
+        if (!cancelled) showToast(describeError(err), "error");
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   const filteredUsers = allUsers.filter(
     (u) =>
@@ -124,8 +169,11 @@ export default function AdminPanelPage() {
                 </tr>
               </thead>
               <tbody>
-                {filteredUsers.map((u) => (
-                  <tr key={u.id} className={styles.trow}>
+                {filteredUsers.map((u, index) => (
+                  <tr
+                    key={u.usserId || u.id || `user-row-${index}`}
+                    className={styles.trow}
+                  >
                     <td>
                       <div className="d-flex align-items-center gap-2">
                         <div className={styles.userAva}>
@@ -180,7 +228,7 @@ export default function AdminPanelPage() {
                           <button
                             className="btn btn-sm btn-outline-success"
                             title="Verify"
-                            onClick={() => handleVerify(u.id)}
+                            onClick={() => handleVerify(u.usserId || u.id)}
                           >
                             <i className="fas fa-check"></i>
                           </button>
@@ -189,7 +237,7 @@ export default function AdminPanelPage() {
                           <button
                             className="btn btn-sm btn-outline-warning"
                             title="Flag"
-                            onClick={() => handleFlag(u.id)}
+                            onClick={() => handleFlag(u.usserId || u.id)}
                           >
                             <i className="fas fa-flag"></i>
                           </button>
@@ -206,7 +254,7 @@ export default function AdminPanelPage() {
                   </tr>
                 ))}
                 {filteredUsers.length === 0 && (
-                  <tr>
+                  <tr key="no-users-found">
                     <td colSpan={5} className="text-center text-muted py-4">
                       No users match your search.
                     </td>
@@ -677,8 +725,11 @@ export default function AdminPanelPage() {
                       (a.status === "Verified") - (b.status === "Verified"),
                   )
                   .slice(0, 4)
-                  .map((u) => (
-                    <tr key={u.id} className={styles.trow}>
+                  .map((u, index) => (
+                    <tr
+                      key={u.usserId || u.id || `mod-user-${index}`}
+                      className={styles.trow}
+                    >
                       <td>
                         <div className="d-flex align-items-center gap-2">
                           <div className={styles.userAva}>

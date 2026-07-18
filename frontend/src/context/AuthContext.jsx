@@ -1,4 +1,6 @@
 import { login as loginApi, registerOwner, registerTenant } from "../api/auth";
+import { describeError } from "../api/client";
+import { useAuthStore } from "../store/authStore";
 import { createContext, useContext, useState, useCallback } from "react";
 import { MOCK_ACCOUNTS, INITIAL_PROPERTIES } from "../data/mockData";
 
@@ -216,14 +218,34 @@ export function AuthProvider({ children }) {
   async (email, password) => {
     try {
       const data = await loginApi(email, password);
+      const backendUser = data.user || data;
+
+      const rawRole = backendUser.Role || backendUser.role || backendUser.userType;
+      let formattedRole = "";
+      if (rawRole) {
+        const roleStr = rawRole.toString().toLowerCase();
+        if (roleStr === "admin") formattedRole = "Admin";
+        else if (roleStr === "owner") formattedRole = "Owner";
+        else if (roleStr === "tenant") formattedRole = "Tenant";
+      }
 
       const safeUser = {
-        id: Date.now(),
-        email,
-        role: data.role,
-        accessToken: data.accessToken,
+        id: backendUser.usserId || backendUser.id,
+        email: backendUser.email || email,
+        role: formattedRole,
+        name: backendUser.firstName 
+          ? `${backendUser.firstName} ${backendUser.lastName || ''}`.trim() 
+          : (backendUser.name || email.split('@')[0]),
+        accessToken: data.accessToken || data.token,
         refreshToken: data.refreshToken,
       };
+
+      useAuthStore.getState().setAuth({
+        accessToken: safeUser.accessToken,
+        refreshToken: safeUser.refreshToken,
+        role: safeUser.role,
+        isAuthenticated: true
+      });
 
       setUser(safeUser);
       localStorage.setItem("smsrly_user", JSON.stringify(safeUser));
@@ -235,7 +257,10 @@ export function AuthProvider({ children }) {
     } catch (err) {
       return {
         success: false,
-        error: "Invalid email or password.",
+        error:
+          err.response?.status === 401
+            ? "Invalid email or password."
+            : describeError(err),
       };
     }
   },
@@ -254,7 +279,7 @@ export function AuthProvider({ children }) {
           phoneNumber: userData.phoneNumber,
           email: userData.email,
           password: userData.password,
-          businessTaxId: userData.businessTaxId,
+          businessTaxID: userData.businessTaxID,
         });
       } else {
         data = await registerTenant({
@@ -269,7 +294,7 @@ export function AuthProvider({ children }) {
 
       const safeUser = {
         email: userData.email,
-        role: data.role,
+        role: data.role?.toLowerCase(),
         accessToken: data.accessToken,
         refreshToken: data.refreshToken,
       };
@@ -284,9 +309,7 @@ export function AuthProvider({ children }) {
     } catch (err) {
       return {
         success: false,
-        error:
-          err.response?.data?.message ||
-          "Registration failed.",
+        error: describeError(err),
       };
     }
   },
@@ -355,7 +378,8 @@ export function AuthProvider({ children }) {
   const logout = useCallback(() => {
     setUser(null);
     localStorage.removeItem("smsrly_user");
-  }, []);
+    useAuthStore.getState().clearAuth();
+  }, [setUser]);
 
   const updateUser = useCallback((updates) => {
     setUser((prev) => {

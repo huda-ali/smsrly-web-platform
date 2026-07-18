@@ -5,7 +5,7 @@ namespace BusinessLogicLayer.Interfaces
     public interface IMlApiClient
     {
         Task<MlRecommendationsResponse> GetRecommendationsAsync(Guid mlUserId, int topN = 10);
-        Task<List<MlSimilarPropertyItem>> GetSimilarPropertiesAsync(Guid propertyId, int topN = 10);
+        Task<List<MlProperty>> GetSimilarPropertiesAsync(Guid propertyId, int topN = 10);
         Task RecordInteractionAsync(Guid mlUserId, Guid propertyId, string interactionType, double? rating = null);
         Task UpdatePreferencesAsync(Guid mlUserId, MlPreferencesRequest preferences);
         Task<MlScrapeStatusResponse> StartScrapeAsync(string siteName, string targetUrl, int maxPages = 5);

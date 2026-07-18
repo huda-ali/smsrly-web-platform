@@ -97,7 +97,7 @@ export default function LandingPage() {
                     ) : (
                       <i className="fas fa-user-circle fa-lg"></i>
                     )}
-                    <span>{user.name.split(" ")[0]}</span>
+                    <span>{user?.name ? user.name.split(" ")[0] : "User"}</span>
                   </Link>
                   {user.role === "owner" && (
                     <Link

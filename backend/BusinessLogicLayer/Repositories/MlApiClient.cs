@@ -21,12 +21,12 @@ namespace BusinessLogicLayer.Repositories
             return response ?? throw new InvalidOperationException("ML API returned no data");
         }
 
-        public async Task<List<MlSimilarPropertyItem>> GetSimilarPropertiesAsync(Guid propertyId, int topN = 10)
+        public async Task<List<MlProperty>> GetSimilarPropertiesAsync(Guid propertyId, int topN = 10)
         {
-            var response = await _http.GetFromJsonAsync<MlSimilarPropertiesResponse>(
+            var response = await _http.GetFromJsonAsync<List<MlProperty>>(
                 $"similar-properties/{propertyId}?top_n={topN}");
 
-            return response?.SimilarProperties ?? new List<MlSimilarPropertyItem>();
+            return response ?? new List<MlProperty>();
         }
 
         public async Task RecordInteractionAsync(Guid mlUserId, Guid propertyId, string interactionType, double? rating = null)

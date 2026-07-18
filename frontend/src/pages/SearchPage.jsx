@@ -311,7 +311,7 @@ export default function SearchPage() {
                 <i className="fas fa-user-circle fa-lg"></i>
               )}
               <span className={styles.avatarName}>
-                {user.name.split(" ")[0]}
+                {user?.name ? user.name.split(" ")[0] : "User"}
               </span>
             </Link>
           ) : (

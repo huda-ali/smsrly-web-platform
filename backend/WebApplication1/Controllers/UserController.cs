@@ -34,7 +34,7 @@ namespace WebApplication1.Controllers
                     NationalID = u.NationalID,
                     PhoneNumber = u.PhoneNumber,
                     Email = u.Email,
-                    Password = BCrypt.Net.BCrypt.HashPassword(u.Password)
+                    Role = u.GetType().Name
                 })
                 .ToList();
 
@@ -58,7 +58,7 @@ namespace WebApplication1.Controllers
                 NationalID = user.NationalID,
                 PhoneNumber = user.PhoneNumber,
                 Email = user.Email,
-                Password = BCrypt.Net.BCrypt.HashPassword(user.Password)
+                Role = user.GetType().Name
             };
 
             return Ok(dto);
@@ -81,7 +81,7 @@ namespace WebApplication1.Controllers
                 NationalID = user.NationalID,
                 PhoneNumber = user.PhoneNumber,
                 Email = user.Email,
-                Password = BCrypt.Net.BCrypt.HashPassword(user.Password)
+                Role = user.GetType().Name
             };
 
             return Ok(dto);
@@ -104,7 +104,7 @@ namespace WebApplication1.Controllers
                 NationalID = user.NationalID,
                 PhoneNumber = user.PhoneNumber,
                 Email = user.Email,
-                Password = BCrypt.Net.BCrypt.HashPassword(user.Password)
+                Role = user.GetType().Name
             };
 
             return Ok(dto);

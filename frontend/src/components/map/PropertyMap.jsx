@@ -32,6 +32,8 @@ export default function PropertyMap({
   useEffect(() => {
     if (!mapRef.current) return;
 
+    let invalidateTimeout;
+
     if (mapInstanceRef.current) {
       mapInstanceRef.current.remove();
       mapInstanceRef.current = null;
@@ -64,7 +66,7 @@ export default function PropertyMap({
         bounds: worldBounds,
       }).addTo(map);
 
-      setTimeout(() => map.invalidateSize(), 200);
+      invalidateTimeout = setTimeout(() => map.invalidateSize(), 200);
 
       if (markers.length > 0) {
         const points = [];
@@ -85,6 +87,7 @@ export default function PropertyMap({
           map.fitBounds(L.latLngBounds(points), {
             padding: [40, 40],
             maxZoom: 15,
+            animate: false,
           });
         }
       } else if (lat && lng) {
@@ -122,7 +125,9 @@ export default function PropertyMap({
     }
 
     return () => {
+      clearTimeout(invalidateTimeout);
       if (mapInstanceRef.current) {
+        mapInstanceRef.current.stop();
         mapInstanceRef.current.remove();
         mapInstanceRef.current = null;
       }

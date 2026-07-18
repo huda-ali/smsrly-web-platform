@@ -157,7 +157,7 @@ export default function PropertyDetailsPage() {
                 <i className="fas fa-user-circle fa-lg"></i>
               )}
               <span className="d-none d-md-inline">
-                {user.name.split(" ")[0]}
+                {user?.name ? user.name.split(" ")[0] : "User"}
               </span>
             </Link>
           ) : (

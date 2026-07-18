@@ -47,24 +47,8 @@ namespace PresentationLayer.Controllers
         [HttpGet("similar/{propertyId}")]
         public async Task<IActionResult> GetSimilarProperties(Guid propertyId, [FromQuery] int topN = 10)
         {
-            var items = await _mlApiClient.GetSimilarPropertiesAsync(propertyId, topN);
-
-            var dtos = items.Select(i => new PropertyRecommendationDTO
-            {
-                PropertyId = i.Property.Id,
-                Title = i.Property.Title,
-                Price = i.Property.Price,
-                City = i.Property.City,
-                Country = i.Property.Country,
-                Bedrooms = i.Property.Bedrooms,
-                Bathrooms = i.Property.Bathrooms,
-                PropertyType = i.Property.PropertyType,
-                Images = i.Property.Images,
-                Score = i.Score,
-                Reason = i.Reason
-            });
-
-            return Ok(dtos);
+            var properties = await _mlApiClient.GetSimilarPropertiesAsync(propertyId, topN);
+            return Ok(properties);
         }
 
         [HttpPost("interact")]

@@ -30,7 +30,7 @@ export default function SignInPage() {
     }
     setLoading(true);
     await new Promise((r) => setTimeout(r, 350));
-    const result = login(email.trim(), password);
+    const result = await login(email.trim(), password);
     setLoading(false);
     if (!result.success) {
       setError(result.error);

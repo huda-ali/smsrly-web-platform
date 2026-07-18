@@ -42,10 +42,6 @@ export default function SignUpPage() {
       return;
     }
 
-    if (role === "owner" && !businessTaxID.trim()) {
-      setError("Business Tax ID is required.");
-      return;
-    }
     if (!email.trim()) {
       setError("Email is required.");
       return;
